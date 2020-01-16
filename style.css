@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    display: none;
+}
+
+body {
+    background-color: #E0E4CC;
+    color: #FA6900;
+}
+
+.game-img {
+    border: 5px solid blue;
+    border-radius: 45%;
+    background-color: lightblue;
+    margin: 10px;
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    transition-duration: .5s;
+}
+
+input:checked + .game-img {
+    border: 5px solid darkred;
+    background-color: red;
+    height: 130px;
+    width: 130px;
+    transition-duration: .5s;
+}
+
+input:hover + .game-img {
+    /* border-style: double; */
+    transition-duration: .5s;
+}
+
+h2, h3 {
+    font-family: 'Baloo Bhai', cursive;
+}
+
+p {
+    font-family: 'Concert One', cursive;
+}
+
+header {
+    border: 5px solid #69D2E7;
+    background-color: #A7DBD8;
+    color: #FA6900;
+    font-family: 'Baloo Bhai', cursive;
+    border-radius: 10px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#rules-box {
+    border: 5px solid #FA6900;
+    background-color: #F38630;
+    color: #69D2E7;;
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#game-box {
+    border: 5px solid #69D2E7;
+    background-color: #A7DBD8;
+    color: #FA6900;
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#results-box {
+    border: 5px solid #FA6900;
+    background-color: #F38630;
+    color: #69D2E7;;
+    border-radius: 10px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+ul {
+    list-style: inside;
+    padding-inline-start: 0px;
+    font-family: 'Concert One', cursive;
+}

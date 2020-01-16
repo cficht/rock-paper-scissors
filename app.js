@@ -6,12 +6,19 @@ const loseText = document.getElementById('lose-text');
 const drawText = document.getElementById('draw-text');
 const currentGameText = document.getElementById('current-game-text');
 const computerChoiceText = document.getElementById('computer-choice-text');
+const resetButton = document.getElementById('reset-button');
 
 let winCount = 0;
 let loseCount = 0;
 let drawCount = 0;
 
+currentGameText.style.visibility = 'hidden';
+computerChoiceText.style.visibility = 'hidden';
+
 playButton.addEventListener('click', () => {
+
+    currentGameText.style.visibility = 'visible';
+    computerChoiceText.style.visibility = 'visible';
 
     let computerThrow = getRandomThrow();
     let userThrow = document.querySelector('input:checked').value;
@@ -31,7 +38,7 @@ playButton.addEventListener('click', () => {
         currentGameText.textContent = 'YOU LOSE';
     } else if (currentResult === 'draw') {
         drawCount++;
-        currentGameText.textContent = 'YOU DRAW';
+        currentGameText.textContent = 'DRAW';
     }
 
     computerChoiceText.textContent = `The computer chose ${computerThrow}`;
@@ -40,5 +47,19 @@ playButton.addEventListener('click', () => {
     loseText.textContent = loseCount;
     drawText.textContent = drawCount;
 
+});
+
+resetButton.addEventListener('click', () => {
+
+    winCount = 0;
+    loseCount = 0;
+    drawCount = 0;
+
+    currentGameText.style.visibility = 'hidden';
+    computerChoiceText.style.visibility = 'hidden';
+    winText.textContent = winCount;
+    loseText.textContent = loseCount;
+    drawText.textContent = drawCount;
+    
 });
 
