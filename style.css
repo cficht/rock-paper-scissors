@@ -25,13 +25,13 @@ body {
 input:checked + .game-img {
     border: 5px solid darkred;
     background-color: red;
-    height: 130px;
-    width: 130px;
+
     transition-duration: .5s;
 }
 
 input:hover + .game-img {
-    /* border-style: double; */
+    height: 130px;
+    width: 130px;
     transition-duration: .5s;
 }
 
@@ -41,6 +41,7 @@ h2, h3 {
 
 p {
     font-family: 'Concert One', cursive;
+    font-size: 20px;
 }
 
 header {
@@ -48,8 +49,9 @@ header {
     background-color: #A7DBD8;
     color: #FA6900;
     font-family: 'Baloo Bhai', cursive;
+    font-size: 20px;
     border-radius: 10px;
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
@@ -61,7 +63,7 @@ header {
     background-color: #F38630;
     color: #69D2E7;;
     border-radius: 10px;
-    width: 500px;
+    width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
@@ -73,7 +75,7 @@ header {
     background-color: #A7DBD8;
     color: #FA6900;
     border-radius: 10px;
-    width: 500px;
+    width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
@@ -81,18 +83,37 @@ header {
     padding: 10px;
 }
 
+#game-table-left {
+    width: 450px;
+}
+
+#game-table-right {
+    width: 350px;
+}
 #results-box {
     border: 5px solid #FA6900;
     background-color: #F38630;
     color: #69D2E7;;
     border-radius: 10px;
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
 
+}
+
+#play-button {
+    border: 5px solid #FA6900;
+    background-color: #F38630;
+    font-weight: bolder;
+}
+
+#reset-button {
+    border: 5px solid #69D2E7;
+    background-color: #A7DBD8;
+    font-weight: bolder;
 }
 
 table {

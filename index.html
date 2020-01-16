@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Concert+One|Passion+One&display=swap" rel="stylesheet">
+    <meta name="Description" content="A simple game of rock-paper-scissors.">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Concert+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors!</title>
 </head>
@@ -18,8 +19,8 @@
     <main>
 
         <article id='rules-box'>
+            <h2>See if you can beat the computer!</h2>
             <ul>
-                <h2>See if you can beat the computer!</h2>
                 <li>Paper beats Rock!</li>
                 <li>Rock beats Scissors!</li>
                 <li>Scissors beats Paper!</li>
@@ -28,22 +29,32 @@
         </article>
 
         <article id="game-box">
-            <label>
-                <input type="radio" name="game" value="rock" checked>
-                <img class="game-img" src="./rock.png" height="70" width="70">
-            </label>
-            <label>
-                <input type="radio" name="game" value="paper">
-                <img class="game-img" src="./paper.png" height="70" width="70">
-            </label>
-            <label>
-                <input type="radio" name="game" value="scissors">
-                <img class="game-img" src="./scissors.png" height="70" width="70">
-            </label>
-            <br>
-            <button id="play-button">Play!</button>
-            <h2 id="current-game-text">TEST</h2>
-            <h3 id="computer-choice-text">TEST</h3>
+            <table style="width: 100%">
+                <tbody>
+                <tr>
+                <td id="game-table-left">
+                    <label>
+                        <input type="radio" name="game" value="rock" checked>
+                        <img class="game-img" src="./rock.png" height="70" width="70" alt="A hand making the shape of a rock.">
+                    </label>
+                    <label>
+                        <input type="radio" name="game" value="paper">
+                        <img class="game-img" src="./paper.png" height="70" width="70" alt="A hand making the shape of paper.">
+                    </label>
+                    <label>
+                        <input type="radio" name="game" value="scissors">
+                        <img class="game-img" src="./scissors.png" height="70" width="70" alt="A hand making the shape of a pair of scissors.">
+                    </label>
+                    <br>
+                    <button id="play-button">Play!</button>
+                </td>
+                <td id="game-table-right">
+                    <p id="current-game-text">TEST</p>
+                    <p id="computer-choice-text">TEST</p>
+                </td>
+                </tr>
+                </tbody>
+            </table>
         </article>
 
         <article id="results-box">

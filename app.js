@@ -19,6 +19,9 @@ playButton.addEventListener('click', () => {
 
     currentGameText.style.visibility = 'visible';
     computerChoiceText.style.visibility = 'visible';
+    winText.style.color = '#69D2E7';
+    loseText.style.color = '#69D2E7';
+    drawText.style.color = '#69D2E7';
 
     let computerThrow = getRandomThrow();
     let userThrow = document.querySelector('input:checked').value;
@@ -32,13 +35,19 @@ playButton.addEventListener('click', () => {
 
     if (currentResult === 'win') {
         winCount++;
-        currentGameText.textContent = 'YOU WIN';
+        currentGameText.textContent = 'YOU WIN!!';
+        winText.style.color = 'yellow';
+        currentGameText.style.color = 'yellow';
     } else if (currentResult === 'lose') {
         loseCount++;
-        currentGameText.textContent = 'YOU LOSE';
+        currentGameText.textContent = 'YOU LOSE!!!';
+        loseText.style.color = 'red';
+        currentGameText.style.color = 'red';
     } else if (currentResult === 'draw') {
         drawCount++;
-        currentGameText.textContent = 'DRAW';
+        currentGameText.textContent = 'DRAW!!!';
+        drawText.style.color = 'black';
+        currentGameText.style.color = 'black';
     }
 
     computerChoiceText.textContent = `The computer chose ${computerThrow}`;
@@ -60,6 +69,9 @@ resetButton.addEventListener('click', () => {
     winText.textContent = winCount;
     loseText.textContent = loseCount;
     drawText.textContent = drawCount;
+    winText.style.color = '#69D2E7';
+    loseText.style.color = '#69D2E7';
+    drawText.style.color = '#69D2E7';
     
 });
 
