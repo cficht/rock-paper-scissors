@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    display: none;
+}
+
+
+body {
+    background-color: #E0E4CC;
+    color: #FA6900;
+}
+
+h2, h3 {
+    font-family: 'Baloo Bhai', cursive;
+}
+
+p {
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+
+article, header {
+    border-radius: 10px;
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.game-img {
+    border: 5px solid blue;
+    border-radius: 45%;
+    background-color: lightblue;
+    margin: 10px;
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    transition-duration: .5s;
+}
+
+input:checked + .game-img {
+    border: 5px solid darkred;
+    background-color: red;
+
+    transition-duration: .5s;
+}
+
+input:hover + .game-img {
+    height: 130px;
+    width: 130px;
+    transition-duration: .5s;
+}
+
+
+header, #game-box {
+    border: 5px solid #69D2E7;
+    background-color: #A7DBD8;
+    color: #FA6900;
+}
+
+#rules-box, #results-box {
+    border: 5px solid #FA6900;
+    background-color: #F38630;
+    color: #69D2E7;
+}
+
+
+header {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 20px;
+}
+
+#game-box, #results-box {
+    padding: 10px;
+}
+
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+#game-table-left {
+    width: 450px;
+}
+
+#game-table-right {
+    width: 350px;
+}
+
+
+#play-button {
+    border: 5px solid #FA6900;
+    background-color: #F38630;
+    font-weight: bolder;
+}
+
+#reset-button {
+    border: 5px solid #69D2E7;
+    background-color: #A7DBD8;
+    font-weight: bolder;
+}
+
+
+ul {
+    list-style: inside;
+    padding-inline-start: 0px;
+    font-family: 'Concert One', cursive;
+}
