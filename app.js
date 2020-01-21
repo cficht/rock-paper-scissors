@@ -9,6 +9,7 @@ const drawText = document.getElementById('draw-text');
 const currentGameText = document.getElementById('current-game-text');
 const computerChoiceText = document.getElementById('computer-choice-text');
 const resetButton = document.getElementById('reset-button');
+const counters = document.querySelectorAll('.counter');
 
 // sets initial state
 let winCount = 0;
@@ -26,9 +27,7 @@ playButton.addEventListener('click', () => {
     computerChoiceText.style.visibility = 'visible';
 
     // restores win, lose and draw text color to default
-    winText.style.color = '#69D2E7';
-    loseText.style.color = '#69D2E7';
-    drawText.style.color = '#69D2E7';
+    colorReset();
 
     // gets computer and user's throws and checks who wins
     let computerThrow = getRandomThrow();
@@ -39,19 +38,25 @@ playButton.addEventListener('click', () => {
     if (currentResult === 'win') {
         winCount++;
         currentGameText.textContent = 'YOU WIN!!';
-        winText.style.color = 'yellow';
-        currentGameText.style.color = 'yellow';
     } else if (currentResult === 'lose') {
         loseCount++;
         currentGameText.textContent = 'YOU LOSE!!!';
-        loseText.style.color = 'red';
-        currentGameText.style.color = 'red';
     } else if (currentResult === 'draw') {
         drawCount++;
         currentGameText.textContent = 'DRAW!!!';
-        drawText.style.color = 'black';
-        currentGameText.style.color = 'black';
     }
+
+    const rpsColors = {
+        win: 'yellow',
+        lose: 'red',
+        draw: 'black'
+    };
+
+    // update color of current result to text elements - golfed
+    const resultColor = rpsColors[currentResult];
+
+    [winText, loseText, drawText][(['win', 'lose', 'draw'].indexOf(currentResult))].style.color = resultColor;
+    currentGameText.style.color = resultColor;
 
     // updates the remaining dom
     computerChoiceText.textContent = `The computer chose ${computerThrow}`;
@@ -75,9 +80,12 @@ resetButton.addEventListener('click', () => {
     loseText.textContent = loseCount;
     drawText.textContent = drawCount;
 
-    winText.style.color = '#69D2E7';
-    loseText.style.color = '#69D2E7';
-    drawText.style.color = '#69D2E7';
+    colorReset();
     
 });
 
+function colorReset() {
+    for (let i = 0; i < counters.length; i++) {
+        counters[i].style.color = '#69D2E7';
+    }
+}

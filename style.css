@@ -111,3 +111,15 @@ ul {
     padding-inline-start: 0px;
     font-family: 'Concert One', cursive;
 }
+
+.win {
+    color: yellow;
+}
+
+.lose {
+    color: red;
+}
+
+.draw {
+    color: black;
+}
